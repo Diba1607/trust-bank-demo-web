@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Banking – TrustBank</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .app-mockup {
+      background: var(--green-dark);
+      border-radius: 28px;
+      padding: 32px 24px;
+      color: #fff;
+      max-width: 320px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.25);
+      position: relative; overflow: hidden;
+    }
+    .app-mockup::before {
+      content: ''; position: absolute; right: -60px; top: -60px;
+      width: 200px; height: 200px; border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+    }
+    .app-header { font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 4px; }
+    .app-balance { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--gold); margin-bottom: 20px; }
+    .app-txns { display: flex; flex-direction: column; gap: 10px; }
+    .app-txn { display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.07); border-radius: 10px; padding: 10px 14px; }
+    .app-txn-info { font-size: 13px; }
+    .app-txn-name { font-weight: 500; }
+    .app-txn-date { font-size: 11px; color: rgba(255,255,255,0.5); }
+    .app-txn-amt { font-size: 14px; font-weight: 600; }
+    .app-txn-amt.debit { color: #f07070; }
+    .app-txn-amt.credit { color: #70f0a0; }
+    .app-quick-actions { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px; }
+    .app-action { text-align: center; }
+    .app-action-icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 6px; font-size: 18px; }
+    .app-action-label { font-size: 10px; color: rgba(255,255,255,0.65); }
+    .digital-showcase { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    @media (max-width: 768px) { .digital-showcase { grid-template-columns: 1fr; } .app-mockup { margin: 0 auto; } }
+  </style>
+</head>
+<body>
+  <div id="nav-root"></div>
+
+  <section class="page-hero" style="background: linear-gradient(135deg, #0a2a3a, #0a6a7a);">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="../index.html">Home</a> › Digital Banking</div>
+      <h1>Digital Banking</h1>
+      <p>Your entire bank in your pocket. TrustBank's award-winning mobile app and internet banking platform lets you do everything — anytime, anywhere.</p>
+      <div class="page-hero-actions">
+        <a href="#" class="btn-white">Download App</a>
+        <a href="#" class="btn-ghost">Login to NetBanking</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="digital-showcase">
+        <div>
+          <div class="section-label">Mobile App</div>
+          <h2 class="section-title">Banking at Your Fingertips</h2>
+          <p style="color:var(--text-muted); font-size:15px; line-height:1.7; margin-bottom:28px;">The TrustBank app puts complete banking control in your hands — check balances, transfer funds, pay bills, invest, and more. All secured with biometric authentication.</p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="#" class="btn-green" style="padding:12px 20px; display:flex; align-items:center; gap:8px; border-radius:10px;">📱 App Store</a>
+            <a href="#" class="btn-green" style="padding:12px 20px; display:flex; align-items:center; gap:8px; border-radius:10px;">🤖 Google Play</a>
+          </div>
+        </div>
+        <div style="display:flex; justify-content:center;">
+          <div class="app-mockup">
+            <div class="app-header">Total Balance</div>
+            <div class="app-balance">৳ 2,48,500</div>
+            <div class="app-quick-actions">
+              <div class="app-action"><div class="app-action-icon">💸</div><div class="app-action-label">Send</div></div>
+              <div class="app-action"><div class="app-action-icon">⬇️</div><div class="app-action-label">Receive</div></div>
+              <div class="app-action"><div class="app-action-icon">⚡</div><div class="app-action-label">Pay Bills</div></div>
+              <div class="app-action"><div class="app-action-icon">📊</div><div class="app-action-label">Invest</div></div>
+            </div>
+            <div style="font-size:12px; color:rgba(255,255,255,0.5); margin-bottom:12px; text-transform:uppercase; letter-spacing:1px;">Recent Transactions</div>
+            <div class="app-txns">
+              <div class="app-txn">
+                <div class="app-txn-info"><div class="app-txn-name">Salary Credit</div><div class="app-txn-date">Apr 01, 2025</div></div>
+                <div class="app-txn-amt credit">+৳50,000</div>
+              </div>
+              <div class="app-txn">
+                <div class="app-txn-info"><div class="app-txn-name">DESCO Bill</div><div class="app-txn-date">Mar 28, 2025</div></div>
+                <div class="app-txn-amt debit">-৳2,400</div>
+              </div>
+              <div class="app-txn">
+                <div class="app-txn-info"><div class="app-txn-name">bKash Transfer</div><div class="app-txn-date">Mar 25, 2025</div></div>
+                <div class="app-txn-amt debit">-৳5,000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--gray-100);">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-label">Features</div>
+        <h2 class="section-title">Everything You Can Do Digitally</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon">💸</div><h4>Instant Transfers</h4><p>Send money to any bank account in Bangladesh instantly via BEFTN/RTGS/bKash.</p></div>
+        <div class="feature-card"><div class="feature-icon">⚡</div><h4>Bill Payments</h4><p>Pay electricity, gas, water, internet, and mobile bills in seconds.</p></div>
+        <div class="feature-card"><div class="feature-icon">📱</div><h4>Mobile Recharge</h4><p>Top up any Bangladeshi mobile number from the app instantly.</p></div>
+        <div class="feature-card"><div class="feature-icon">📈</div><h4>Open FD Online</h4><p>Open a Fixed Deposit anytime without visiting a branch.</p></div>
+        <div class="feature-card"><div class="feature-icon">📋</div><h4>e-Statements</h4><p>Download PDF statements for any period directly from the app.</p></div>
+        <div class="feature-card"><div class="feature-icon">🔔</div><h4>Smart Notifications</h4><p>Instant alerts for all debits, credits, and account activities.</p></div>
+        <div class="feature-card"><div class="feature-icon">🤖</div><h4>AI Spending Insights</h4><p>Understand your spending patterns with AI-powered categorization.</p></div>
+        <div class="feature-card"><div class="feature-icon">🔐</div><h4>Biometric Login</h4><p>Log in with Face ID or fingerprint — no passwords to remember.</p></div>
+        <div class="feature-card"><div class="feature-icon">💬</div><h4>In-App Chat Support</h4><p>Chat with a support agent or our AI assistant 24/7 from within the app.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header"><div class="section-label">FAQ</div><h2 class="section-title">Digital Banking FAQ</h2></div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">How do I register for internet banking? <span class="faq-icon">+</span></div>
+          <div class="faq-answer">Visit trustbank.com.bd/netbanking and click Register. You'll need your account number, registered mobile, and NID. Verification takes less than 2 minutes.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Is the mobile app available for both Android and iOS? <span class="faq-icon">+</span></div>
+          <div class="faq-answer">Yes. TrustBank Mobile is available on the Google Play Store (Android 8.0+) and Apple App Store (iOS 14+). It's completely free to download and use.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What is the daily transfer limit? <span class="faq-icon">+</span></div>
+          <div class="faq-answer">The default daily transfer limit is ৳5,00,000 for mobile banking. You can increase or decrease this limit from app settings at any time, up to a maximum of ৳50,00,000 for verified accounts.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What should I do if I forget my password? <span class="faq-icon">+</span></div>
+          <div class="faq-answer">Click "Forgot Password" on the login screen. You'll receive an OTP on your registered mobile number to reset your password instantly.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-root"></div>
+  <script src="../js/components.js"></script>
+</body>
+</html>

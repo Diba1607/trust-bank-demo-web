@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us – TrustBank</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; align-items: start; }
+    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+    .contact-info-cards { display: flex; flex-direction: column; gap: 16px; }
+    .contact-info-card {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 20px; border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius-lg); transition: var(--transition);
+    }
+    .contact-info-card:hover { border-color: var(--green-main); box-shadow: var(--shadow-sm); }
+    .contact-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--green-light); display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+    .contact-info-card h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+    .contact-info-card p, .contact-info-card a { font-size: 13px; color: var(--text-muted); text-decoration: none; display: block; }
+    .contact-info-card a:hover { color: var(--green-main); }
+    .contact-form-box {
+      background: var(--white); border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius-lg); padding: 36px;
+      box-shadow: var(--shadow-sm);
+    }
+    .contact-form-box h3 { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 24px; }
+    .branch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .branch-card { padding: 20px; border: 1.5px solid var(--gray-200); border-radius: var(--radius); transition: var(--transition); }
+    .branch-card:hover { border-color: var(--green-main); }
+    .branch-card h5 { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+    .branch-card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+    .branch-tag { display: inline-block; padding: 2px 10px; border-radius: 20px; background: var(--green-light); color: var(--green-dark); font-size: 11px; font-weight: 600; margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+  <div id="nav-root"></div>
+
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="../index.html">Home</a> › Contact Us</div>
+      <h1>Contact Us</h1>
+      <p>We're here to help. Reach us by phone, email, chat, or visit a branch near you. Our average response time is under 2 hours.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="contact-grid">
+        <!-- Info -->
+        <div>
+          <div class="section-header">
+            <div class="section-label">Get in Touch</div>
+            <h2 class="section-title">We're Always Available</h2>
+          </div>
+          <div class="contact-info-cards">
+            <div class="contact-info-card">
+              <div class="contact-icon">📞</div>
+              <div>
+                <h4>24/7 Customer Helpline</h4>
+                <a href="tel:16575">16575 (Bangladesh)</a>
+                <a href="tel:+880-2-9574540">+880-2-9574540 (International)</a>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-icon">📧</div>
+              <div>
+                <h4>Email Support</h4>
+                <a href="mailto:support@trustbank.com.bd">support@trustbank.com.bd</a>
+                <a href="mailto:nrb@trustbank.com.bd">nrb@trustbank.com.bd (NRB)</a>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-icon">💬</div>
+              <div>
+                <h4>Live Chat & WhatsApp</h4>
+                <p>Chat with us 24/7 through the website or app</p>
+                <a href="#">+880 1700-000000 (WhatsApp)</a>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-icon">🏢</div>
+              <div>
+                <h4>Head Office</h4>
+                <p>TrustBank Tower, 40 Motijheel C/A</p>
+                <p>Dhaka 1000, Bangladesh</p>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-icon">🕐</div>
+              <div>
+                <h4>Branch Banking Hours</h4>
+                <p>Sunday–Thursday: 10:00 AM – 5:00 PM</p>
+                <p>Friday–Saturday: Closed (ATMs 24/7)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="contact-form-box">
+          <h3>Send Us a Message</h3>
+          <div class="form-row">
+            <div class="form-group"><label>Your Name</label><input type="text" placeholder="Full name"></div>
+            <div class="form-group"><label>Mobile Number</label><input type="tel" placeholder="01XXXXXXXXX"></div>
+          </div>
+          <div class="form-group" style="margin-bottom:16px;"><label>Email Address</label><input type="email" placeholder="you@example.com"></div>
+          <div class="form-group" style="margin-bottom:16px;"><label>Subject</label>
+            <select>
+              <option>Account Opening Enquiry</option>
+              <option>Loan Enquiry</option>
+              <option>Card Application</option>
+              <option>Complaint / Feedback</option>
+              <option>NRB Services</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group" style="margin-bottom:16px;">
+            <label>Message</label>
+            <textarea placeholder="Describe your query..." rows="5" style="padding:12px 14px; border-radius:9px; border:1.5px solid var(--gray-300); font-family:'DM Sans',sans-serif; font-size:14px; width:100%; resize:vertical; outline:none; transition:var(--transition);" onfocus="this.style.borderColor='var(--green-main)'" onblur="this.style.borderColor='var(--gray-300)'"></textarea>
+          </div>
+          <button class="btn-submit" onclick="document.getElementById('contact-success').style.display='block'">Send Message</button>
+          <p id="contact-success" style="display:none;margin-top:16px;color:var(--green-dark);font-weight:600;">✅ Message sent! We'll respond within 2 business hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Branches -->
+  <section class="section" style="background:var(--gray-100);">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-label">Branches</div>
+        <h2 class="section-title">Find a Branch Near You</h2>
+        <p class="section-sub">200+ branches across all 64 districts of Bangladesh.</p>
+      </div>
+      <div class="branch-grid">
+        <div class="branch-card"><span class="branch-tag">Dhaka Division</span><h5>Motijheel Branch (Head Office)</h5><p>40 Motijheel C/A, Dhaka 1000<br>📞 02-9574540</p></div>
+        <div class="branch-card"><span class="branch-tag">Dhaka Division</span><h5>Dhanmondi Branch</h5><p>House 12, Road 2, Dhanmondi<br>📞 02-9120342</p></div>
+        <div class="branch-card"><span class="branch-tag">Chittagong Division</span><h5>Agrabad Branch</h5><p>17 Agrabad C/A, Chittagong<br>📞 031-716200</p></div>
+        <div class="branch-card"><span class="branch-tag">Sylhet Division</span><h5>Sylhet Branch</h5><p>Zindabazar, Sylhet<br>📞 0821-716200</p></div>
+        <div class="branch-card"><span class="branch-tag">Rajshahi Division</span><h5>Rajshahi Branch</h5><p>Ghoramara, Rajshahi<br>📞 0721-776200</p></div>
+        <div class="branch-card"><span class="branch-tag">Khulna Division</span><h5>Khulna Branch</h5><p>KDA Avenue, Khulna<br>📞 041-730200</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header"><div class="section-label">FAQ</div><h2 class="section-title">Support FAQ</h2></div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">How do I report an unauthorized transaction? <span class="faq-icon">+</span></div>
+          <div class="faq-answer">Call our fraud hotline immediately at 16575 (24/7). Also block your card from the mobile app. We'll investigate within 24 hours and credit unauthorized charges under our Zero Liability policy.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How long does a complaint resolution take? <span class="faq-icon">+</span></div>
+          <div class="faq-answer">We resolve 90% of complaints within 24 hours. Complex cases may take up to 7 working days. You'll receive updates via SMS and email throughout the resolution process.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Can I visit any branch for my account queries? <span class="faq-icon">+</span></div>
+          <div class="faq-answer">Yes! TrustBank operates on Any-Branch Banking — you can handle most account transactions and queries at any of our 200+ branches, regardless of which branch your account was opened.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-root"></div>
+  <script src="../js/components.js"></script>
+</body>
+</html>

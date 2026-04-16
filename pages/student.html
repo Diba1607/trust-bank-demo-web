@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Account – TrustBank</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .student-perks { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 48px; }
+    .perk-card {
+      background: linear-gradient(135deg, var(--green-pale), #fff);
+      border: 1.5px solid var(--green-main);
+      border-radius: var(--radius-lg); padding: 24px 20px; text-align: center;
+    }
+    .perk-card .perk-icon { font-size: 36px; margin-bottom: 12px; }
+    .perk-card h4 { font-size: 15px; font-weight: 600; margin-bottom: 6px; color: var(--green-dark); }
+    .perk-card p { font-size: 13px; color: var(--text-muted); }
+    .page-hero-content { flex: 1; color: #fff; }
+    .page-hero-image {
+      flex: 0 0 420px;
+      display: flex; align-items: flex-end; justify-content: center;
+      position: relative;
+    }
+    .page-hero-inner {
+      max-width: 1200px; margin: 0 auto;
+      padding: 60px 24px;
+      display: flex; align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      position: relative; z-index: 1;
+      width: 100%;
+    }
+    .page-hero-image img {
+      width: 100%;
+      max-width: 300px;
+      object-fit: contain;
+      filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
+      animation: coinsFloat 4s ease-in-out infinite;
+      transform-origin: bottom center;
+    }
+    @keyframes coinsFloat {
+      0%, 100% { transform: translateY(0px); }
+      50%       { transform: translateY(-12px); }
+    }
+    @media (max-width: 768px) {
+      .page-hero-inner { flex-direction: column; }
+      .page-hero-image { flex: none; width: 100%; max-width: 280px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="nav-root"></div>
+
+  <section class="page-hero" style="background: linear-gradient(135deg, #1a2a5c, #3050b0);">
+    <div class="page-hero-inner">
+      <div class="page-hero-content">
+        <div class="breadcrumb"><a href="../index.html">Home</a> › <a href="#">Accounts</a> › Student Account</div>
+        <h1>Student Account 🎓</h1>
+        <p>Start your financial journey right. Zero fees, smart savings, and exclusive student perks — designed for students aged 10 to 25.</p>
+        <div class="page-hero-actions">
+          <a href="#apply" class="btn-white">Open Student Account</a>
+          <a href="#" class="btn-ghost">Learn More</a>
+        </div>
+      </div>
+      <div class="page-hero-image">
+        <img src="../img/student.png" alt="Growing savings illustrated as stacked gold coins with trees">
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="rate-box" style="border-color: #3050b0;">
+        <div class="rate-box-num" style="color:#1a2a5c;">5.50% p.a.</div>
+        <div class="rate-box-info">
+          <h4>Higher Interest for Students</h4>
+          <p>Students earn 0.25% more than regular savings accounts. Interest is calculated daily and credited monthly.</p>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <div class="section-label">Exclusive Perks</div>
+        <h2 class="section-title">Made for Student Life</h2>
+      </div>
+      <div class="student-perks">
+        <div class="perk-card"><div class="perk-icon">🆓</div><h4>Zero Fees</h4><p>No account maintenance charges, no minimum balance penalty.</p></div>
+        <div class="perk-card"><div class="perk-icon">💳</div><h4>Free Debit Card</h4><p>Annual fee waived on VISA debit card for the duration of studentship.</p></div>
+        <div class="perk-card"><div class="perk-icon">📚</div><h4>Education Loan Link</h4><p>Priority access to student education loans at subsidised rates.</p></div>
+        <div class="perk-card"><div class="perk-icon">🎁</div><h4>Student Cashback</h4><p>5% cashback on book purchases and educational expenses paid via card.</p></div>
+        <div class="perk-card"><div class="perk-icon">📱</div><h4>Free Mobile Banking</h4><p>Full mobile banking access with app-exclusive features.</p></div>
+        <div class="perk-card"><div class="perk-icon">🏦</div><h4>ATM Cashback</h4><p>Free ATM withdrawals from any TrustBank ATM, unlimited times.</p></div>
+      </div>
+
+      <div class="section-header">
+        <div class="section-label">Features</div>
+        <h2 class="section-title">Everything Students Need</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon">🎓</div><h4>Available Age 10–25</h4><p>Minors (10-18) can bank with guardian co-operation; 18-25 independently.</p></div>
+        <div class="feature-card"><div class="feature-icon">📋</div><h4>Simple KYC</h4><p>Open with student ID + parent/guardian NID. No complex documentation.</p></div>
+        <div class="feature-card"><div class="feature-icon">💸</div><h4>Guardian Transfer</h4><p>Parents can send money directly to the student account from their TrustBank account instantly.</p></div>
+        <div class="feature-card"><div class="feature-icon">🔔</div><h4>Smart Alerts</h4><p>Get SMS and app notifications for every credit and debit transaction.</p></div>
+        <div class="feature-card"><div class="feature-icon">🎯</div><h4>Savings Goals</h4><p>Set savings targets (laptop, trip, fees) and track progress in the app.</p></div>
+        <div class="feature-card"><div class="feature-icon">🔄</div><h4>Auto-Convert at 25</h4><p>Account automatically upgrades to a regular savings account at age 25.</p></div>
+      </div>
+
+      <table class="compare-table" style="margin-top:48px;">
+        <thead><tr><th>Feature</th><th>Student Account</th><th>Regular Savings</th></tr></thead>
+        <tbody>
+          <tr><td>Minimum Balance</td><td class="check">৳ 0 (zero)</td><td>৳ 1,000</td></tr>
+          <tr><td>Service Charge</td><td class="check">None</td><td>৳ 250/half-year</td></tr>
+          <tr><td>Interest Rate</td><td class="check">5.50% p.a.</td><td>5.25% p.a.</td></tr>
+          <tr><td>Annual Card Fee</td><td class="check">Waived</td><td>৳ 500</td></tr>
+          <tr><td>ATM Withdrawals</td><td class="check">Unlimited free</td><td>5 free/month</td></tr>
+          <tr><td>Student Cashback</td><td class="check">5% on edu spend</td><td class="cross">—</td></tr>
+          <tr><td>Education Loan Access</td><td class="check">Priority</td><td class="cross">Standard</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="apply-section" id="apply">
+    <div class="apply-inner">
+      <div class="section-label" style="text-align:center;">Apply Now</div>
+      <h2 class="section-title">Open Your Student Account</h2>
+      <p>Takes 5 minutes online. Bring your student ID and you're set!</p>
+      <div class="form-row">
+        <div class="form-group"><label>Student Name</label><input type="text" placeholder="Full name"></div>
+        <div class="form-group"><label>Date of Birth</label><input type="date"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Institution Name</label><input type="text" placeholder="School / College / University"></div>
+        <div class="form-group"><label>Student ID / Roll Number</label><input type="text" placeholder="Your student ID"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Guardian Mobile</label><input type="tel" placeholder="01XXXXXXXXX"></div>
+        <div class="form-group"><label>Your Mobile</label><input type="tel" placeholder="01XXXXXXXXX"></div>
+      </div>
+      <button class="btn-submit" onclick="document.getElementById('stu-success').style.display='block'">Submit Application</button>
+      <p id="stu-success" style="display:none;margin-top:16px;color:var(--green-dark);font-weight:600;">✅ Great! We'll contact you and your guardian within 24 hours to activate your account.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header"><div class="section-label">FAQ</div><h2 class="section-title">Student Account FAQs</h2></div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">What is the minimum age to open a Student Account? <span class="faq-icon">+</span></div>
+          <div class="faq-answer">Students as young as 10 years old can open an account with a guardian. From age 18, the student can independently operate the account without guardian involvement.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Is there really zero minimum balance? <span class="faq-icon">+</span></div>
+          <div class="faq-answer">Yes! We understand students often have limited funds. There is absolutely no minimum balance requirement and no penalty for zero balance, as long as the account is active (at least one transaction per year).</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How does the 5% cashback work? <span class="faq-icon">+</span></div>
+          <div class="faq-answer">When you use your TrustBank Student Debit Card to pay at bookstores, stationers, or educational institutions (tuition, coaching centres), 5% of the transaction amount is credited back to your account within 7 working days. Maximum cashback ৳500 per month.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What happens to the account after I turn 25? <span class="faq-icon">+</span></div>
+          <div class="faq-answer">At age 25, you'll receive a notification and your account will automatically upgrade to a TrustBank Savings Account. You'll retain your account number, balance, and transaction history — no need to reapply.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-root"></div>
+  <script src="../js/components.js"></script>
+</body>
+</html>

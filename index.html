@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrustBank – Bangladesh's Most Trusted Bank</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Home-specific styles */
+    .home-hero .hero-inner { min-height: 520px; }
+    .testimonials { padding: 80px 24px; background: var(--gray-100); }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .testimonial-card {
+      background: var(--white); border-radius: var(--radius-lg);
+      padding: 28px; border: 1.5px solid var(--gray-200);
+      transition: var(--transition);
+    }
+    .testimonial-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .testimonial-stars { color: var(--gold); font-size: 16px; margin-bottom: 12px; }
+    .testimonial-text { font-size: 14px; line-height: 1.7; color: var(--text-muted); margin-bottom: 16px; font-style: italic; }
+    .testimonial-author { display: flex; align-items: center; gap: 12px; }
+    .testimonial-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--green-main); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 600; font-size: 15px;
+    }
+    .testimonial-author strong { display: block; font-size: 14px; }
+    .testimonial-author span { font-size: 12px; color: var(--text-muted); }
+    .cta-banner {
+      background: linear-gradient(135deg, var(--green-dark), var(--green-main));
+      padding: 80px 24px; text-align: center; color: #fff;
+    }
+    .cta-banner h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700; margin-bottom: 14px;
+    }
+    .cta-banner p { font-size: 16px; color: rgba(255,255,255,0.85); margin-bottom: 32px; }
+    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .news-card {
+      border: 1.5px solid var(--gray-200); border-radius: var(--radius-lg);
+      overflow: hidden; transition: var(--transition); cursor: pointer;
+    }
+    .news-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .news-card-img {
+      height: 160px;
+      background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 48px;
+    }
+    .news-card-body { padding: 20px; }
+    .news-tag {
+      display: inline-block; padding: 3px 10px; border-radius: 20px;
+      background: var(--green-light); color: var(--green-dark);
+      font-size: 11px; font-weight: 600; margin-bottom: 10px;
+    }
+    .news-card-body h4 { font-size: 15px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+    .news-card-body p { font-size: 13px; color: var(--text-muted); }
+    .news-card-meta { font-size: 12px; color: var(--text-muted); margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <div id="nav-root"></div>
+
+  <!-- HERO -->
+  <section class="hero home-hero">
+    <div class="hero-bg-circle"></div>
+    <div class="hero-bg-circle2"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge"><span class="hero-badge-dot"></span> Bangladesh Bank Licensed</div>
+        <h1>Banking Made<br><span class="highlight">Simple & Secure</span><br>For Everyone</h1>
+        <p>Experience everyday banking reimagined — daily interest calculations, zero hassle, and complete freedom to manage your finances from anywhere.</p>
+        <div class="hero-btns">
+          <a href="pages/savings.html" class="btn-white">Open an Account</a>
+          <a href="pages/about.html" class="btn-ghost">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="img/hero.png" alt="Banking Illustration" class="hero-img">
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-num" data-target="2.4" data-suffix="M+">0</div>
+        <div class="stat-label">Happy Customers</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="200" data-suffix="+">0</div>
+        <div class="stat-label">Branches Nationwide</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="27" data-suffix=" yrs">0</div>
+        <div class="stat-label">Years of Excellence</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="99.9" data-suffix="%">0</div>
+        <div class="stat-label">Uptime Guarantee</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACCOUNTS -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-label">Our Accounts</div>
+        <h2 class="section-title">Choose the Right Account for You</h2>
+        <p class="section-sub">From everyday savings to business-grade current accounts — we have solutions tailored for every life stage.</p>
+      </div>
+      <div class="accounts-grid">
+        <a class="account-card" href="pages/savings.html">
+          <div class="account-card-top">
+            <div class="account-card-icon">💰</div>
+            <h3>Savings Account</h3>
+            <p>Daily interest on your balance</p>
+          </div>
+          <div class="account-card-body">
+            <ul>
+              <li>Daily interest calculation</li>
+              <li>VISA Debit Card included</li>
+              <li>Free online & mobile banking</li>
+              <li>Any-branch banking</li>
+            </ul>
+          </div>
+          <div class="account-card-footer"><span class="btn-card">Explore →</span></div>
+        </a>
+        <a class="account-card" href="pages/current.html">
+          <div class="account-card-top" style="background: linear-gradient(135deg, #1a3a5c, #2060a0);">
+            <div class="account-card-icon">🏢</div>
+            <h3>Current Account</h3>
+            <p>Unlimited transactions for businesses</p>
+          </div>
+          <div class="account-card-body">
+            <ul>
+              <li>Unlimited transactions</li>
+              <li>Overdraft facility available</li>
+              <li>Cheque book included</li>
+              <li>Multi-user business access</li>
+            </ul>
+          </div>
+          <div class="account-card-footer"><span class="btn-card">Explore →</span></div>
+        </a>
+        <a class="account-card" href="pages/fixed-deposit.html">
+          <div class="account-card-top" style="background: linear-gradient(135deg, #5c3a00, #a06010);">
+            <div class="account-card-icon">📈</div>
+            <h3>Fixed Deposit</h3>
+            <p>Earn up to 8.5% guaranteed returns</p>
+          </div>
+          <div class="account-card-body">
+            <ul>
+              <li>Up to 8.5% annual interest</li>
+              <li>Flexible tenure 1–60 months</li>
+              <li>Loan against FD available</li>
+              <li>Auto-renewal option</li>
+            </ul>
+          </div>
+          <div class="account-card-footer"><span class="btn-card">Explore →</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY TRUSTBANK -->
+  <section class="section" style="background: var(--gray-100);">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-label">Why TrustBank</div>
+        <h2 class="section-title">Banking You Can Rely On</h2>
+        <p class="section-sub">We combine the trust of a traditional bank with the speed of a modern fintech.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-num">01</div>
+          <h4>100% Secure & Licensed</h4>
+          <p>Fully regulated by Bangladesh Bank with state-of-the-art cybersecurity protecting every transaction.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-num">02</div>
+          <h4>Best-in-Class Interest Rates</h4>
+          <p>Daily compounding on savings and competitive rates on FDs that beat industry averages.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-num">03</div>
+          <h4>24/7 Digital Access</h4>
+          <p>Full-featured mobile app and online banking with real-time notifications and instant transfers.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-num">04</div>
+          <h4>Human Support Always</h4>
+          <p>Dedicated relationship managers and 24/7 call center — because banking is personal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-label">Customer Stories</div>
+        <h2 class="section-title">Trusted by Millions</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"TrustBank's savings account has given me the best interest rate I've ever had. Opening was completely online in under 10 minutes!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RK</div>
+            <div><strong>Rahima Khatun</strong><span>Dhaka, Business Owner</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"As an NRB, sending remittances back home was always a headache. TrustBank's NRB account made it seamless and affordable."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">FA</div>
+            <div><strong>Farhan Ahmed</strong><span>London, NRB Customer</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The Fixed Deposit rates are genuinely excellent. I've rolled over my deposit three times now and the returns keep impressing me."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MH</div>
+            <div><strong>Mohammad Hossain</strong><span>Chittagong, Retired Teacher</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-label">Latest News</div>
+        <h2 class="section-title">From TrustBank</h2>
+      </div>
+      <div class="news-grid">
+        <div class="news-card">
+          <div class="news-card-img">🏆</div>
+          <div class="news-card-body">
+            <span class="news-tag">Award</span>
+            <h4>TrustBank wins "Best Digital Bank in Bangladesh 2025"</h4>
+            <p>Recognised by the Asian Banking & Finance for excellence in digital innovation.</p>
+            <div class="news-card-meta">March 15, 2025</div>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="news-card-img">📱</div>
+          <div class="news-card-body">
+            <span class="news-tag">Product</span>
+            <h4>New Mobile App v4.0 — Faster, Smarter, Safer</h4>
+            <p>Completely redesigned with AI-powered spending insights and biometric login.</p>
+            <div class="news-card-meta">April 2, 2025</div>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="news-card-img">🤝</div>
+          <div class="news-card-body">
+            <span class="news-tag">Partnership</span>
+            <h4>TrustBank partners with bKash for instant transfers</h4>
+            <p>Customers can now send and receive money to/from bKash directly from their account.</p>
+            <div class="news-card-meta">April 5, 2025</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div style="max-width: 680px; margin: 0 auto;">
+      <h2>Ready to Start Your Banking Journey?</h2>
+      <p>Join over 2.4 million Bangladeshis who trust TrustBank for their everyday banking needs.</p>
+      <div class="cta-btns">
+        <a href="pages/savings.html" class="btn-white">Open Account Online</a>
+        <a href="pages/contact.html" class="btn-ghost">Talk to an Advisor</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (Home) -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-label">FAQ</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">How do I open an account with TrustBank? <span class="faq-icon">+</span></div>
+          <div class="faq-answer">You can open an account fully online through our website or mobile app in under 10 minutes. You'll need your NID, a selfie, and proof of address. Alternatively, visit any of our 200+ branches.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Is my money safe with TrustBank? <span class="faq-icon">+</span></div>
+          <div class="faq-answer">Absolutely. TrustBank is licensed and regulated by Bangladesh Bank. All deposits are protected under the Deposit Insurance Scheme up to BDT 1,00,000. We use 256-bit encryption and real-time fraud detection.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What documents do I need to open an account? <span class="faq-icon">+</span></div>
+          <div class="faq-answer">For Bangladeshi residents: National ID card, one recent passport-size photo, and a valid utility bill or rent agreement for address verification. For NRBs, a valid passport and overseas address proof is required.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How long does account opening take? <span class="faq-icon">+</span></div>
+          <div class="faq-answer">Online account opening is typically completed within 24 hours of document verification. For branch openings, the account is usually activated the same day.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Does TrustBank charge for online transfers? <span class="faq-icon">+</span></div>
+          <div class="faq-answer">TrustBank-to-TrustBank transfers are completely free. For BEFTN and RTGS transfers, nominal charges apply as per Bangladesh Bank guidelines. Check our Rates & Fees page for the full schedule.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-root"></div>
+  <script src="js/components.js"></script>
+</body>
+</html>
