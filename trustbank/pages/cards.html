@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cards – TrustBank</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .card-visual {
+      width: 320px; height: 190px; border-radius: 18px;
+      padding: 24px 26px; color: #fff;
+      position: relative; overflow: hidden;
+      font-family: 'Playfair Display', serif;
+      box-shadow: 0 20px 48px rgba(0,0,0,0.25);
+      transition: transform 0.3s;
+    }
+    .card-visual:hover { transform: scale(1.04) rotate(-1deg); }
+    .card-visual::before {
+      content: ''; position: absolute; right: -40px; top: -40px;
+      width: 200px; height: 200px; border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+    }
+    .card-visual::after {
+      content: ''; position: absolute; right: 20px; bottom: -60px;
+      width: 160px; height: 160px; border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+    }
+    .card-bank { font-size: 16px; font-weight: 700; margin-bottom: 30px; }
+    .card-num { font-size: 17px; letter-spacing: 3px; opacity: 0.85; margin-bottom: 16px; }
+    .card-bottom { display: flex; justify-content: space-between; align-items: flex-end; }
+    .card-holder { font-size: 12px; opacity: 0.7; letter-spacing: 1px; }
+    .card-expiry { font-size: 12px; opacity: 0.7; }
+    .card-network { position: absolute; right: 24px; top: 24px; font-size: 24px; }
+    .cards-showcase { display: flex; gap: 32px; flex-wrap: wrap; justify-content: center; margin-bottom: 60px; }
+    .card-showcase-item { text-align: center; }
+    .card-showcase-item h4 { margin-top: 16px; font-size: 16px; font-weight: 600; }
+    .card-showcase-item p { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <div id="nav-root"></div>
+
+  <section class="page-hero" style="background: linear-gradient(135deg, #0a2040, #1050a0);">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="../index.html">Home</a> › Cards</div>
+      <h1>Credit & Debit Cards</h1>
+      <p>From classic to platinum — TrustBank cards give you freedom to spend, earn rewards, and stay protected wherever you go in the world.</p>
+      <div class="page-hero-actions">
+        <a href="#apply" class="btn-white">Apply for a Card</a>
+        <a href="#" class="btn-ghost">Compare Cards</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-label">Our Cards</div>
+        <h2 class="section-title">Find Your Perfect Card</h2>
+      </div>
+      <div class="cards-showcase">
+        <div class="card-showcase-item">
+          <div class="card-visual" style="background: linear-gradient(135deg, #1a3a6c, #2060c0);">
+            <div class="card-bank">TrustBank</div>
+            <div class="card-network">💳</div>
+            <div class="card-num">4521 •••• •••• 8472</div>
+            <div class="card-bottom">
+              <div><div class="card-holder">CARDHOLDER NAME</div></div>
+              <div class="card-expiry">12/28</div>
+            </div>
+          </div>
+          <h4>Classic Debit Card</h4>
+          <p>Free with Savings Account</p>
+        </div>
+        <div class="card-showcase-item">
+          <div class="card-visual" style="background: linear-gradient(135deg, #1a1a3c, #4040a0);">
+            <div class="card-bank">TrustBank</div>
+            <div class="card-network">💎</div>
+            <div class="card-num">5278 •••• •••• 3391</div>
+            <div class="card-bottom">
+              <div><div class="card-holder">PREMIUM MEMBER</div></div>
+              <div class="card-expiry">09/29</div>
+            </div>
+          </div>
+          <h4>Gold Credit Card</h4>
+          <p>5% cashback on dining & fuel</p>
+        </div>
+        <div class="card-showcase-item">
+          <div class="card-visual" style="background: linear-gradient(135deg, #2c1a00, #806020);">
+            <div class="card-bank">TrustBank</div>
+            <div class="card-network">🌟</div>
+            <div class="card-num">4111 •••• •••• 7640</div>
+            <div class="card-bottom">
+              <div><div class="card-holder">PLATINUM MEMBER</div></div>
+              <div class="card-expiry">03/30</div>
+            </div>
+          </div>
+          <h4>Platinum Credit Card</h4>
+          <p>Lounge access + 8% cashback</p>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <div class="section-label">Compare</div>
+        <h2 class="section-title">Card Benefits at a Glance</h2>
+      </div>
+      <table class="compare-table">
+        <thead>
+          <tr><th>Feature</th><th>Classic Debit</th><th>Gold Credit</th><th>Platinum Credit</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Annual Fee</td><td>৳ 500</td><td>৳ 2,000</td><td>৳ 5,000</td></tr>
+          <tr><td>Credit Limit</td><td class="cross">—</td><td>Up to ৳3 lakhs</td><td>Up to ৳10 lakhs</td></tr>
+          <tr><td>Cashback on Dining</td><td class="cross">—</td><td class="check">5%</td><td class="check">8%</td></tr>
+          <tr><td>Airport Lounge Access</td><td class="cross">—</td><td class="cross">—</td><td class="check">6 visits/year</td></tr>
+          <tr><td>International Use</td><td class="check">Yes</td><td class="check">Yes</td><td class="check">Yes</td></tr>
+          <tr><td>Contactless (NFC)</td><td class="check">Yes</td><td class="check">Yes</td><td class="check">Yes</td></tr>
+          <tr><td>Travel Insurance</td><td class="cross">—</td><td>Basic</td><td class="check">Comprehensive</td></tr>
+          <tr><td>Reward Points</td><td class="cross">—</td><td class="check">1 pt / ৳50</td><td class="check">2 pts / ৳50</td></tr>
+        </tbody>
+      </table>
+
+      <div class="section-header" style="margin-top:48px;">
+        <div class="section-label">Card Features</div>
+        <h2 class="section-title">Security & Convenience</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card"><div class="feature-icon">🔒</div><h4>EMV Chip & PIN</h4><p>Latest chip technology for secure in-store transactions worldwide.</p></div>
+        <div class="feature-card"><div class="feature-icon">📱</div><h4>Tap & Pay (NFC)</h4><p>Contactless payments for quick, hygienic transactions under ৳5,000.</p></div>
+        <div class="feature-card"><div class="feature-icon">🌐</div><h4>International Acceptance</h4><p>Accepted at 50M+ Visa merchant locations in 200+ countries.</p></div>
+        <div class="feature-card"><div class="feature-icon">⚡</div><h4>Instant Block/Unblock</h4><p>Lock your card immediately from the app if lost or misplaced.</p></div>
+        <div class="feature-card"><div class="feature-icon">🔔</div><h4>Real-Time Alerts</h4><p>SMS and push notifications for every transaction, no matter how small.</p></div>
+        <div class="feature-card"><div class="feature-icon">🛡️</div><h4>Zero Liability</h4><p>100% protection against unauthorized transactions — we've got you covered.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="apply-section" id="apply">
+    <div class="apply-inner">
+      <div class="section-label" style="text-align:center;">Apply</div>
+      <h2 class="section-title">Apply for a TrustBank Card</h2>
+      <p>Quick online application. Decision within 3 business days.</p>
+      <div class="form-row">
+        <div class="form-group"><label>Full Name</label><input type="text" placeholder="As per NID"></div>
+        <div class="form-group"><label>Card Type</label>
+          <select><option>Classic Debit Card</option><option>Gold Credit Card</option><option>Platinum Credit Card</option></select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Mobile</label><input type="tel" placeholder="01XXXXXXXXX"></div>
+        <div class="form-group"><label>Monthly Income</label><input type="text" placeholder="For credit cards"></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>Email</label><input type="email" placeholder="you@example.com"></div>
+        <div class="form-group"><label>TrustBank Account No. (if existing customer)</label><input type="text" placeholder="Optional"></div>
+      </div>
+      <button class="btn-submit" onclick="document.getElementById('card-success').style.display='block'">Apply for Card</button>
+      <p id="card-success" style="display:none;margin-top:16px;color:var(--green-dark);font-weight:600;">✅ Application submitted! You'll receive your card at your registered address within 7-10 working days.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header"><div class="section-label">FAQ</div><h2 class="section-title">Cards FAQ</h2></div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">What is the credit limit on TrustBank credit cards? <span class="faq-icon">+</span></div>
+          <div class="faq-answer">Credit limits are assigned based on your income and credit history. Gold cards start from ৳50,000 up to ৳3,00,000. Platinum cards range from ৳1,00,000 to ৳10,00,000.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How do I earn and redeem reward points? <span class="faq-icon">+</span></div>
+          <div class="faq-answer">Points accumulate automatically with every purchase. Redeem them for cashback (1000 points = ৳100), air miles, or shopping vouchers through the TrustBank rewards portal or mobile app.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Is there an interest-free period on credit cards? <span class="faq-icon">+</span></div>
+          <div class="faq-answer">Yes! You get up to 50 days interest-free credit from the date of purchase if you pay your bill in full by the due date. Partial payments attract interest at the monthly rate.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How do I block my card if it's lost? <span class="faq-icon">+</span></div>
+          <div class="faq-answer">Instantly block your card through the TrustBank mobile app, or call our 24/7 helpline at 16575. A replacement card will be dispatched within 5 working days.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-root"></div>
+  <script src="../js/components.js"></script>
+</body>
+</html>
