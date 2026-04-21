@@ -185,7 +185,7 @@ const FOOTER_HTML = `
   </div>
   <div class="footer-bottom">
     <div class="footer-bottom-inner">
-      <span>© 2025 TrustBank Ltd. All rights reserved. Licensed by Bangladesh Bank.</span>
+      <span>© 2026 TrustBank Ltd. All rights reserved. Licensed by Bangladesh Bank.</span>
       <div class="footer-bottom-links">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Use</a>
